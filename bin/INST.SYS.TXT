@@ -1,0 +1,10 @@
+100 CONSOLE ,,0,1:DEFINT A-Z:REM "INST.SYS" ver 1.02 , by Tomoi,S. 1991,2011
+110 DEFSTR R:R=CHR$(13):RW=CHR$(34):KEY 1,"run "+RW:KEY 2,"poll 1:files"+R:KEY 3,"load "+RW:KEY 6,"save "+RW+".":KEY 7,"poll 2:files 2"+R:KEY 8,"iset"+R
+120 PRINT:BLOAD "INST.obj",R:RS="$F2FD"
+130 PRINT "DVSTAT.SYS / Drive ready sens checker version 3.00 by Tomoi,S."
+140 COLOR 7:PRINT "CHKDRV.SYS / Drive mode adapter version 3.00 by Tomoi,S."
+150 COLOR 6:PRINT:PRINT "Program load address is $F220-"RS:PRINT
+160 COLOR 7:PRINT "POLL command enhanced.":COLOR 7
+170 PRINT "Return data address : ";:COLOR 6:PRINT RS:PRINT:COLOR 7
+180 COLOR 7:PRINT "ISET command enhanced.":COLOR 7:PRINT:ISET
+190 NEW
